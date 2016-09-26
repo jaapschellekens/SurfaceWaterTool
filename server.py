@@ -293,6 +293,7 @@ def SurfaceWaterToolAlgorithm(time_start, time_end, climatology, month_index, de
 
     # single image with permanent and temporary water
     #water_complete = water_permanent.add(water_temporary).clip(CountriesLowerMekong_basin)
+    #TODO: Update merge such that permanent water is always on top
     water_complete = water_permanent_masked.add(water_temporary_masked).clip(CountriesLowerMekong_basin)
     
     # colour rendering
